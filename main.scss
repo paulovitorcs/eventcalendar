@@ -1,0 +1,34 @@
+.singleEventContent {
+    margin: calc(3 * 1rem) calc(10% + 60px) 1rem;
+}
+    .singleEventContent .eventFeaturedImage {
+        max-width: 40%;
+        height: auto;
+        float: right;
+        margin-left: 2rem;
+    }
+
+.overviewEventCalendar a {
+    color:rgba(255, 255, 255, 0.68) !important;
+}
+.overviewEventCalendar a:hover {
+    color: rgba(255, 255, 255, 1) !important;
+}
+
+@media screen and (max-width: 991px) {
+    .singleEventContent {
+        max-width: calc(100% - (2 * 1rem));
+        margin: 0 1rem;
+    }
+        .singleEventContent .eventFeaturedImage {
+            float: unset;
+            margin-left: unset;
+            max-width: 100%;
+        }
+
+    .fc-toolbar .fc-right {
+        float: left !important;
+        top: 10px;
+        position: relative;
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "eventcalendar",
+    "description": "Event Calendar Plugin to Lottaleben",
+    "authors": [
+        "Paulo Vitor Cruz"
+    ],
+    "dependencies": {
+        "fullcalendar": "^3.8.0",
+        "jquery": "^3.2.1",
+        "moment": "^2.20.1"
+    }   
+}
