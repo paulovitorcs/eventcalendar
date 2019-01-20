@@ -13,7 +13,9 @@ get_header();
 			?>
 
 			<h1><?php echo rwmb_meta('title'); ?></h1>
-			<span><strong>Categoria: </strong><?php echo $category->name;?><span>
+			<?php if(rwmb_meta('category') != ''): ?>
+				<span><strong>Categoria: </strong><?php echo $category->name;?><span>
+			<?php endif; ?>
 			<img class="eventFeaturedImage" src="<?php echo rwmb_meta('featuredimage') ?>">
 			<p><?php echo rwmb_meta('description'); ?></p>
 			<?php
