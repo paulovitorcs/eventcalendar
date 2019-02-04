@@ -35,14 +35,14 @@ class EventCalendar {
         include($shortcode_template);
     }
 
-    function customEventPageTemplate() {
+    function customEventPageTemplate($page_template) {
         if (is_page('event')) {
             $page_template = dirname( __FILE__ ) . '/.php';
         }
         return $page_template;
     }
 
-    function customEventSingleTemplate() {
+    function customEventSingleTemplate($single_template) {
         global $post;
 
         $file = dirname(__FILE__) .'/single-'. $post->post_type .'.php';
