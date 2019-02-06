@@ -33,7 +33,7 @@ jQuery(function() {
                 $repeat = $interval->format('%a') + 1;
 
                 if($recurrence == 'None') {
-                    $repeat = 1;
+                    $repeat = 0;
                 }
                 if($recurrence == 'Daily') {
                     $repeat = $interval->format('%a') + 1;
@@ -49,6 +49,10 @@ jQuery(function() {
                 $end = rwmb_meta('end');
 
                 for($i = 0; $i<=$repeat; $i++) {
+                    if($recurrence == 'None') {
+                        $start_date = date("Y-m-d H:i",strtotime($start . '+' . $i . 'Days'));
+                        $end_date = date("Y-m-d H:i",strtotime($end . '+' . $i . 'Days'));
+                    }
                     if($recurrence == 'Daily') {
                         $start_date = date("Y-m-d H:i",strtotime($start . '+' . $i . 'Days'));
                         $end_date = date("Y-m-d H:i",strtotime($end . '+' . $i . 'Days'));
